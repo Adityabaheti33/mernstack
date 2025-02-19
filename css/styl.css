@@ -1,0 +1,73 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    text-align: center;
+}
+table{
+    height: 200px;
+    width: 80%;
+    margin: 20px auto;
+    background-color: aquamarine;
+    font-size:  30px;
+    border-collapse: separate;
+    border: 2px black;
+    border-radius: 10px;
+}
+th{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+td{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.row1{
+    display: flex; /* Enables side-by-side alignment */
+    gap: 20px; /* Adds space between shapes */
+    justify-content: center; /* Centers the shapes */
+}
+
+.rectangle {
+    width: 100px;
+    height: 50px; 
+    border: 5px solid;
+    border-radius: 10px; 
+}
+
+.curve-rec {
+    width: 100px;
+    height: 50px; 
+    border: 5px solid;
+    border-radius: 50px; 
+
+}
+
+.row2{
+    display: flex; /* Enables side-by-side alignment */
+    gap: 20px; /* Adds space between shapes */
+    justify-content: center; /* Centers the shapes */
+}
+
+.row3{
+    display: flex; /* Enables side-by-side alignment */
+    gap: 20px; /* Adds space between shapes */
+    justify-content: center; /* Centers the shapes */
+}
+
+.ovel{
+    width: 100px;
+    height: 50px; 
+    border: 5px solid;
+    border-radius: 50%; 
+}
+
+.downcur-rec{
+    width: 100px;
+    height: 50px; 
+    border: 5px solid;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
