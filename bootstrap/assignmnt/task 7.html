@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Train Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #2f4f27;
+      color: white;
+      padding: 10px;
+      font-size: 20px;
+      text-align: left;
+      position: relative;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 40px solid transparent;
+      border-bottom: 40px solid transparent;
+      border-left: 40px solid white;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    .train {
+      position: relative;
+      display: inline-block;
+      left: 0;
+    }
+
+    #trainImage {
+      width: 300px;
+      height: auto;
+    }
+
+    .controls {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 5px 15px;
+      margin: 5px;
+    }
+
+    h3 {
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<div class="container">
+  <div class="train" id="train">
+    <img src="download.jpeg" id="trainImage" alt="Train">
+  </div>
+
+  <h3>Click the following buttons to handle animation</h3>
+
+  <div class="controls">
+    <button onclick="startTrain()">Start</button>
+    <button onclick="stopTrain()">Stop</button>
+  </div>
+</div>
+
+<script>
+  let train = document.getElementById("train");
+  let position = 0;
+  let animation;
+
+  function moveTrain() {
+    position += 2;
+    if (position > window.innerWidth) {
+      position = -300; // reset to start from left outside screen
+    }
+    train.style.left = position + "px";
+  }
+
+  function startTrain() {
+    if (!animation) {
+      animation = setInterval(moveTrain, 20);
+    }
+  }
+
+  function stopTrain() {
+    clearInterval(animation);
+    animation = null;
+  }
+</script>
+
+</body>
+</html>
+
