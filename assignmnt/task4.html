@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show Date and Time</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 20px;
+    }
+    button {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  
+
+  <button onclick="showDate()">show date</button>
+  <p id="dateOutput"></p>
+
+  <button onclick="showTime()">show Time</button>
+  <p id="timeOutput"></p>
+
+  <script>
+    function showDate() {
+      const date = new Date();
+      const options = { day: 'numeric', month: 'long', year: 'numeric' };
+      const formattedDate = `${date.getDate()}/${date.toLocaleString('default', { month: 'long' })}/${date.getFullYear()}`;
+      document.getElementById("dateOutput").innerText = formattedDate;
+    }
+
+    function showTime() {
+      const time = new Date();
+      document.getElementById("timeOutput").innerText = time.toString();
+    }
+  </script>
+
+</body>
+</html>
